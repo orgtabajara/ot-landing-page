@@ -4,7 +4,7 @@ body, html {
   font-family: 'Roboto', sans-serif;
 }
 
-button, .nav-links a {
+button, .nav-links a {  /* Fixed the selector here */
   font-family: 'Roboto', sans-serif;
 }
 
@@ -57,7 +57,7 @@ p {
 
 .central-box {
   width: 40%;
-  height: 20%;
+  height: 30%;
   min-width: 260px;
   min-height: 100px;
   background-color: #f3f3f3;
@@ -67,7 +67,7 @@ p {
 }
 
 .box-content {
-  padding: 6px;
+  padding: 4px; /* Reduced padding */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,12 +77,12 @@ p {
 
 .box-content h1 {
   margin: 0;
-  font-size: 25px;
+  font-size: 22px; /* Reduced font size */
 }
 
 .box-content p {
-  margin-top: 10px;
-  font-size: 12px;
+  margin: 5px 0; /* Reduced margin */
+  font-size: 11px; /* Reduced font size */
   text-align: center;
 }
 
@@ -136,6 +136,42 @@ p {
   background-color: #e9e9e9;
 }
 
+form {
+  display: grid;
+}
+
+.text-input, .email-input, .message-input {
+  display: flex;
+  width: 100%;
+  margin-right: 30px;
+  margin-left: -10px;
+  padding: 8px; 
+  margin-bottom: 8px; 
+  border: 1px solid #ccc;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 10px; 
+}
+
+.text-input:focus, .email-input:focus, .message-input:focus {
+  border: 0.5px solid black;
+}
+
+.submit-input {
+  padding: 8px 16px; 
+  background-color: #ffffff;
+  border: 2px solid black; 
+  cursor: pointer;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s ease;
+  font-size: 10px; 
+}
+
+.submit-input:hover {
+  background-color: #e9e9e9;
+}
+
 @media (max-width: 580px) {
   .content {
     flex-direction: column;
@@ -145,6 +181,9 @@ p {
     width: 100%;
   }
 
+  .box-contemt {
+    height: 97%;
+  }
   .box-content h1 {
     font-size: 20px;
   }
@@ -165,5 +204,14 @@ p {
 
   .navlink-button {
     border: 3px solid #0f0f0f;
+  }
+
+  .central-box {
+    width: 40%;
+    height: 57%;
+    background-color: #f3f3f3;
+    border: 3px solid black;
+    box-shadow: 10px 10px 0px 0px black;
+    overflow: hidden;
   }
 }
