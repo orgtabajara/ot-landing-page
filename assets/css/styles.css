@@ -110,7 +110,7 @@ p {
   font-size: 40px;
 }
 
-button {
+.about-button {
   margin-top: 20px;
   padding: 10px 20px;
   background-color: #ffffff;
@@ -119,10 +119,22 @@ button {
   color: black;
 }
 
-button:hover {
+.about-button:hover {
   background-color: #e9e9e9;
 }
 
+.navlink-button {
+  padding: 10px 20px;
+  margin-right: 20px;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+.navlink-button:hover {
+  background-color: #e9e9e9;
+}
 
 @media (max-width: 580px) {
   .content {
@@ -149,5 +161,9 @@ button:hover {
 
   .nav-links a:hover {
     color: #504d4d;
+  }
+
+  .navlink-button {
+    border: 3px solid #0f0f0f;
   }
 }
